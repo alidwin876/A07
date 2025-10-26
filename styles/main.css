@@ -29,29 +29,50 @@ h3 {
 
 /* the styles for the header */
 header {
+    /* add a gradient to the top */
+    /* transitions at a 30 degree angle, starts off as a orange/yellow, transitions to white starting at 30, ends being white at 65 and retransitions back to the color orange */
+    background: linear-gradient(30deg, #6bb73 at 0%, white 30%, white 65%, #6bb73 100%);
     /* add a border bottom with the accent color as the body*/
+
     border-bottom: 2px solid var(--accent-color);
 	& h2 {
 		font-size: 175%;
-		text-indent: 30px;
+		/*text-indent: 30px; */
+        /* set bottom padding to 0 */
+        padding-bottom: 0;
 	}
 	& h3 {
 		font-size: 130%;
 		font-style: italic;
-		text-indent: 30px;
+        /*text-indent: 30px; */
+        /* set bottom padding to 1 em*/
+        padding-bottom: 1em;
 	}
 	& img {
 		float: left;
+        /* add a top and bottom margin */
+        margin: 0.75em 1em;
 	}
 }
 
 /* the styles for the main content */
 /* add the h1 element inside of main and make the borders the same color for the body and header*/
 
+main {
+    clear: left;
+    /* add 1 em padding to right left bottom */
+    padding: 0 1em 1em 1em;
+}
+
 main h1 /*descendant*/ {
-	/*clear: left; */
     border-top: 2px solid var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
+}
+
+/* add a 4px border with rounded corners around the speaker elements and same color as border */
+main img {
+    border: 4px double var(--accent-color);
+    border-radius: 8px;
 }
 
 /* the styles for the footer */
@@ -62,6 +83,9 @@ footer {
 		text-align: center;
         /* make the text white */
         color: white;
+        /* set the padding of top and bottom to 1 em */
+        padding-top: 1em;
+        padding-bottom: 1em;
 	}
 }
 
@@ -88,4 +112,10 @@ h1, h2, h3, p, ul {
 
 ul {
     margin-left: 2em;
+}
+
+/* style the blockquote */
+blockquote {
+    font-style: italic;
+    padding-left: 1em;
 }
