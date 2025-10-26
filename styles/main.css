@@ -29,8 +29,7 @@ h3 {
 
 /* the styles for the header */
 header {
-    /* increased the height so
-    height: 150px; */
+
     /* add a gradient to the top */
     /* transitions at a 30 degree angle, starts off as a orange/yellow, transitions to white starting at 30, ends being white at 65 and retransitions back to the color orange */
     background: linear-gradient(30deg, #f7e35c 0%, white 30%, white 65%, #f7e35c 100%);
