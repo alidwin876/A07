@@ -31,7 +31,7 @@ h3 {
 header {
     /* add a gradient to the top */
     /* transitions at a 30 degree angle, starts off as a orange/yellow, transitions to white starting at 30, ends being white at 65 and retransitions back to the color orange */
-    background: linear-gradient(30deg, #6bb73 at 0%, white 30%, white 65%, #6bb73 100%);
+    background: linear-gradient(30deg, #f7e35c 0%, white 30%, white 65%, #f7e35c 100%);
     /* add a border bottom with the accent color as the body*/
 
     border-bottom: 2px solid var(--accent-color);
