@@ -7,6 +7,10 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
+    /* make the width 80%, margin auto and 2-pixel border to use the accent color from the root */
+    width: 80%;
+    margin: auto;
+    border: 2px solid var(--accent-color);
 }
 a:hover, a:focus{
 	font-style: italic;
@@ -25,6 +29,8 @@ h3 {
 
 /* the styles for the header */
 header {
+    /* add a border bottom with the accent color as the body*/
+    border-bottom: 2px solid var(--accent-color);
 	& h2 {
 		font-size: 175%;
 		text-indent: 30px;
@@ -40,18 +46,46 @@ header {
 }
 
 /* the styles for the main content */
-main {
-	clear: left;
+/* add the h1 element inside of main and make the borders the same color for the body and header*/
+
+main h1 /*descendant*/ {
+	/*clear: left; */
+    border-top: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
 }
 
 /* the styles for the footer */
+/* set the bg color of the footer the same as the borders and the font color inside the nested p to white */
 footer {
+    background-color: var(--accent-color);
 	& p {
 		text-align: center;
+        /* make the text white */
+        color: white;
 	}
 }
 
 /* CSS class */
 .large {
 	font-size: 125%;
+}
+
+/* setting all margins and padding to zero and also the box sizing property to broder box */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* index html only uses h1-h3; add a styling rule for padding .5em for headings, paragraphs and unordered lists */
+h1, h2, h3, p, ul {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+/* style rule to make the left margin 2em for UNordered lists*/
+
+ul {
+    margin-left: 2em;
 }
